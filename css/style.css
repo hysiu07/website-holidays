@@ -20,7 +20,7 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
-  padding: 1rem;
+  padding: 1em;
   border: 1px solid transparent;
   border-radius: 8px;
   cursor: pointer;
@@ -34,28 +34,28 @@ body {
 .burger-btn:hover .burger-btn__bars::before {
   width: 100%;
 }
-.burger-btn:hover__box {
+.burger-btn__box {
   position: relative;
   width: 40px;
   height: 30px;
 }
-.burger-btn:hover__bars, .burger-btn:hover__bars::after, .burger-btn:hover__bars::before {
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
   content: "";
   position: absolute;
   right: 0;
   height: 3px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: red;
   transition: width 0.3s;
 }
-.burger-btn:hover__bars {
+.burger-btn__bars {
   width: 100%;
 }
-.burger-btn:hover__bars::after {
+.burger-btn__bars::after {
   top: 13px;
   width: 60%;
 }
-.burger-btn:hover__bars::before {
+.burger-btn__bars::before {
   top: 26px;
   width: 30%;
   transition-delay: 0.1s;

@@ -25,7 +25,7 @@ body {
 	position: fixed;
 	top: 20px;
 	right: 20px;
-	padding: 1rem;
+	padding: 1em;
 	border: 1px solid transparent;
 	border-radius: 8px;
 	cursor: pointer;
@@ -39,25 +39,24 @@ body {
 		.burger-btn__bars::before {
 			width: 100%;
 		}
-
-		&__box {
-			position: relative;
-			width: 40px;
-			height: 30px;
-		}
-		&__bars,
-		&__bars::after,
-		&__bars::before {
-			@include buttonBars;
-		}
-		&__bars {
-			width: 100%;
-		}
-		&__bars::after {
+	}
+	&__box {
+		position: relative;
+		width: 40px;
+		height: 30px;
+	}
+	&__bars,
+	&__bars::after,
+	&__bars::before {
+		@include buttonBars;
+	}
+	&__bars {
+		width: 100%;
+		&::after {
 			top: 13px;
 			width: 60%;
 		}
-		&__bars::before {
+		&::before {
 			top: 26px;
 			width: 30%;
 			transition-delay: 0.1s;
