@@ -125,6 +125,7 @@ body {
 	flex-direction: column;
 	padding: 2em;
 	height: 75vh;
+
 	text-align: center;
 	color: $pure-white;
 	@include heroImages('../img/header-mini.jpg');
@@ -175,6 +176,135 @@ body {
 	}
 }
 
+// HERO-IMG
+
+.hero-img {
+	position: relative;
+	padding: 10em 2em;
+	@include heroImages('../img/hero-img-small.jpg');
+	text-align: center;
+	color: $pure-white;
+	overflow: hidden;
+	&__title {
+		font-family: 'Dancing Script', cursive;
+		font-size: 6rem;
+		margin-bottom: 1rem;
+	}
+	&__text {
+		padding: 1em 0;
+	}
+}
+// ISLANDS
+
+.islands {
+	// &__cards {
+	// 	display: flex;
+	// 	flex-direction: row;
+	// 	justify-content: space-around;
+	// }
+	&__card {
+		position: relative;
+		margin: 1em 0;
+		height: 450px;
+
+		color: $pure-white;
+		text-align: center;
+		perspective: 800px;
+		&:hover {
+			.islands__card-img {
+				transform: rotateY(-180deg);
+				opacity: 0;
+			}
+			.islands__card-info {
+				transform: rotateY(0);
+				opacity: 1;
+			}
+		}
+		&-img {
+			padding: 2em;
+			width: 100%;
+			height: 100%;
+
+			border-radius: 8px;
+			background-size: cover;
+			background-position: center;
+			transition: 1s;
+			&--first {
+				background-image: $light-blue-gradient, url('../img/palm.jpg');
+			}
+			&--second {
+				background-image: $blue-gradient, url('../img/boat.jpg');
+			}
+			&--third {
+				background-image: $purple-gradient, url('../img/water.jpg');
+			}
+			&-title {
+				font-family: 'Dancing Script', cursive;
+				font-size: 2.8rem;
+			}
+			&-info {
+				position: absolute;
+				bottom: 30px;
+				right: 30px;
+				font-size: 1.8rem;
+				i {
+					margin-right: 1rem;
+				}
+			}
+		}
+		&-info {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			border-radius: 8px;
+			background-image: $light-blue-gradient-solid;
+			opacity: 0;
+			transform: rotateY(-180deg);
+			transition: 1s;
+
+			&-title {
+				@include examplePosition;
+				top: 1.2em;
+				font-family: 'Dancing Script', cursive;
+				font-size: 2.8rem;
+			}
+			&-list {
+				margin: 0 auto;
+				width: 70%;
+				list-style: none;
+				&-item {
+					padding: 1rem;
+					border-bottom: 1px solid $pure-white;
+					font-size: 1.4rem;
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+			&-btn {
+				@include examplePosition;
+				bottom: 2em;
+				padding: 1em;
+
+				border-radius: 8px;
+				width: 80%;
+				border: none;
+				background-color: $green-color;
+				cursor: pointer;
+				&::before {
+					background-color: $green-color-hover;
+				}
+			}
+		}
+	}
+}
+
 // **********************
 // MEDIA
 // **********************
@@ -201,6 +331,11 @@ body {
 			max-height: 300px;
 		}
 	}
+	// .islands{
+	// 	&__card{
+	// 		width: 60%;
+	// 	}
+	// }
 }
 @media (min-width: 768px) {
 	.white-block {
@@ -223,6 +358,31 @@ body {
 			font-size: 1.8rem;
 		}
 	}
+	.hero-img {
+		padding: 30rem 2rem;
+		hr {
+			margin: 0 auto;
+			width: 70%;
+		}
+		&__title {
+			font-size: 9rem;
+		}
+		&__text {
+			font-size: 2.2rem;
+		}
+	}
+	.islands {
+		&__cards {
+			display: flex;
+			justify-content: center;
+			flex: wrap;
+		}
+		&__card{
+			margin: 1em;
+			width: 45%;
+
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -234,6 +394,9 @@ body {
 		background-image: $blue-gradient, url('../img/header-big.jpg');
 		&__heading {
 			font-size: 10rem;
+		}
+		&__text {
+			font-size: 2.6rem;
 		}
 	}
 	.nav {
@@ -258,4 +421,34 @@ body {
 			font-size: 3rem;
 		}
 	}
+	.hero-img {
+		padding: 40rem 2em;
+		background-image: $blue-gradient, url('../img/hero-img-big.jpg');
+		&__title {
+			font-size: 8rem;
+		}
+		&__text {
+			font-size: 2.5rem;
+		}
+	}
+	.islands {
+		&__cards {
+			display: flex;
+			justify-content: center;
+			flex: wrap;
+		}
+		&__card{
+			margin: 1em;
+			width: 45%;
+
+		}
+	}
+
+}
+@media (min-width: 1100px) {
+.islands{
+	&__card{
+		width: 30%;
+	}
+}
 }
