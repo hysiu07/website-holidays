@@ -356,6 +356,37 @@ body {
 		// }
 	}
 }
+// reviews/////
+
+.reviews {
+	&__box {
+		position: relative;
+		margin: 2em;
+		padding: 2em;
+		border-radius: 8px;
+		box-shadow: 3px 3px 10px #2e2e2e2e;
+		.fas{
+			font-size: 2rem;
+		}
+		
+		&-text {
+			padding: 1em;
+		}
+		strong{
+			padding: 1em;
+		}
+
+	
+		img {
+			position: absolute;
+			top: -30px;
+			left: 60%;
+			border-radius: 50%;
+			width: 8rem;
+			height: 8rem;
+		}
+	}
+}
 
 // **********************
 // MEDIA
@@ -521,11 +552,11 @@ body {
 				object-fit: cover;
 				height: 300px;
 			}
-			&-info-title{
+			&-info-title {
 				font-size: 2rem;
 			}
-			&-info-text{
-				font-size:1.5rem;
+			&-info-text {
+				font-size: 1.5rem;
 			}
 		}
 	}
