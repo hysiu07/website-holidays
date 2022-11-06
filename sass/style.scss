@@ -64,6 +64,8 @@ body {
 		}
 	}
 }
+
+
 .nav {
 	position: fixed;
 	top: 0;
@@ -115,6 +117,12 @@ body {
 .nav-item-animation {
 	animation: navItemAnimation 1s both;
 }
+.black-bars-colors,
+.black-bars-colors::after,
+.black-bars-colors::before {
+	color: $dark;
+}
+
 // HEADER
 
 .header {
@@ -437,7 +445,7 @@ body {
 	color: $pure-white;
 	background-color: $dark;
 	overflow: hidden;
-	p{
+	p {
 		font-weight: 300;
 	}
 	&__bottom {
@@ -585,7 +593,7 @@ body {
 		}
 	}
 	.footer {
-		.footer__boxes{
+		.footer__boxes {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
